@@ -103,8 +103,7 @@ function ssl_menu() {
 
     if [[ "$SSL_MODE" == "1" ]]; then
 
-        certbot certonly \
-            --standalone \
+        certbot --nginx \
             -d "$DOMAIN" \
             --non-interactive \
             --agree-tos \
